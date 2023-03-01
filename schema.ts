@@ -15,7 +15,6 @@ import {
   relationship,
   password,
   timestamp,
-  select,
 } from '@keystone-6/core/fields';
 
 // the document field is a more complicated field, so it has it's own package
@@ -124,6 +123,8 @@ export const lists: Lists = {
         },
       }),
     },
+
+    graphql: { omit: ["update"] }
   }),
 
   // this last list is our Tag list, it only has a name field for now
